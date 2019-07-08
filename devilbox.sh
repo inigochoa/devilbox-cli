@@ -11,6 +11,7 @@ source "$DIR/utils/messages.sh"
 source "$DIR/utils/prompt.sh"
 
 # Devilbox command import.
+source "$DIR/commands/folder.sh"
 source "$DIR/commands/help.sh"
 
 # Devilbox command.
@@ -19,7 +20,9 @@ devilbox() {
         devilbox --help
     else
         case $1 in
-            --help|-h) __devilboxHelp ;;
+            --folder|-f) __devilboxFolder ;;
+            --help|-h)   __devilboxHelp ;;
+            --www|-w)    __devilboxProjectsFolder ;;
             *)
                 echo -e "${COLOR_RED}[ERROR]${COLOR_DEFAULT} Command not found"
                 echo -e "Type ${COLOR_YELLOW}devilbox --help${COLOR_DEFAULT} to see a list of available commands";
