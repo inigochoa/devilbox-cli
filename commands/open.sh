@@ -1,13 +1,5 @@
 # Open devilbox administration on a web explorer.
 __devilboxOpen() {
-    devilbox --folder
-
-    if ! __isRunning; then
-        __error "Devilbox containers are not running"
-
-        return "$KO_CODE"
-    fi
-
     if [ -z "$DEVILBOX_URL" ]; then
         __error "Variable DEVILBOX_URL not found"
 
