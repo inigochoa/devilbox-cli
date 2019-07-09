@@ -11,6 +11,7 @@ source "$DIR/utils/messages.sh"
 source "$DIR/utils/prompt.sh"
 
 # Devilbox command import.
+source "$DIR/commands/docker.sh"
 source "$DIR/commands/folder.sh"
 source "$DIR/commands/help.sh"
 
@@ -22,6 +23,7 @@ devilbox() {
         case $1 in
             --folder|-f) __devilboxFolder ;;
             --help|-h)   __devilboxHelp ;;
+            --status|-s) __devilboxStatus ;;
             --www|-w)    __devilboxProjectsFolder ;;
             *)
                 echo -e "${COLOR_RED}[ERROR]${COLOR_DEFAULT} Command not found"
