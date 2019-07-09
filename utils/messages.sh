@@ -2,7 +2,7 @@
 
 __error() {
     local message=$1
-    printf "%s %s\n" "${COLOR_RED}[âœ˜]" "${COLOR_DEFAULT}$message" >&2
+    printf "%s %s\n" "${COLOR_RED}[❌]" "${COLOR_DEFAULT}$message" >&2
 }
 
 __info() {
@@ -23,5 +23,5 @@ __question() {
 
 __success() {
     local message=$1
-    printf "%s %s\n" "${COLOR_GREEN}[âœ”]" "${COLOR_DEFAULT}$message"
+    printf "%s %s\n" "${COLOR_GREEN}[✔]" "${COLOR_DEFAULT}$message"
 }
