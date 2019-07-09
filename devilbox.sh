@@ -22,11 +22,14 @@ devilbox() {
         devilbox --help
     else
         case $1 in
-            --folder|-f) __devilboxFolder ;;
-            --help|-h)   __devilboxHelp ;;
-            --open|-o)   __devilboxOpen ;;
-            --status|-s) __devilboxStatus ;;
-            --www|-w)    __devilboxProjectsFolder ;;
+            --down|-d)    __devilboxDown ;;
+            --folder|-f)  __devilboxFolder ;;
+            --help|-h)    __devilboxHelp ;;
+            --open|-o)    __devilboxOpen ;;
+            --status|-s)  __devilboxStatus ;;
+            --up|-u)      __devilboxUp ;;
+            --up-all|-ua) __devilboxUpAll ;;
+            --www|-w)     __devilboxProjectsFolder ;;
             *)
                 echo -e "${COLOR_RED}[ERROR]${COLOR_DEFAULT} Command not found"
                 echo -e "Type ${COLOR_YELLOW}devilbox --help${COLOR_DEFAULT} to see a list of available commands";
