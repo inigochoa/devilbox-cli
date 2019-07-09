@@ -22,6 +22,7 @@ devilbox() {
         devilbox --help
     else
         case $1 in
+            --clean|-c)   __devilboxClean ;;
             --down|-d)    __devilboxDown ;;
             --folder|-f)  __devilboxFolder ;;
             --help|-h)    __devilboxHelp ;;

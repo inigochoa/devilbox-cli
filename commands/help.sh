@@ -3,6 +3,7 @@
 __devilboxHelp() {
     echo -e "\nUsage: devilbox [COMMAND]\n"
 
+    __devilboxHelpOption "devilbox [--clean|-c]" "${COLOR_YELLOW}Clean${COLOR_DEFAULT} devilbox docker containers."
     __devilboxHelpOption "devilbox [--down|-d]" "${COLOR_YELLOW}Stop${COLOR_DEFAULT} devilbox docker containers."
     __devilboxHelpOption "devilbox [--folder|-f]" "${COLOR_YELLOW}Move${COLOR_DEFAULT} to the devilbox folder."
     __devilboxHelpOption "devilbox [--help|-h]" "Display devilbox CLI command ${COLOR_YELLOW}help${COLOR_DEFAULT}."

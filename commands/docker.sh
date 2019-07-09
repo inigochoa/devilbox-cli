@@ -1,3 +1,16 @@
+# Clean docker containers.
+__devilboxClean() {
+    devilbox --folder
+
+    if __isRunning; then
+        __error "Devilbox containers are running"
+
+        return "$KO_CODE"
+    fi
+
+    sudo docker image prune -a
+}
+
 # Stop and clear docker containers.
 __devilboxDown() {
     devilbox --folder
