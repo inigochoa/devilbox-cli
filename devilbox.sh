@@ -15,6 +15,7 @@ source "$DIR/commands/docker.sh"
 source "$DIR/commands/folder.sh"
 source "$DIR/commands/help.sh"
 source "$DIR/commands/open.sh"
+source "$DIR/commands/shell.sh"
 
 # Devilbox command.
 devilbox() {
@@ -28,6 +29,7 @@ devilbox() {
             --help|-h)    __devilboxHelp ;;
             --open|-o)    __devilboxOpen ;;
             --status|-s)  __devilboxStatus ;;
+            --shell|-sh)  __devilboxShell ;;
             --up|-u)      __devilboxUp ;;
             --up-all|-ua) __devilboxUpAll ;;
             --www|-w)     __devilboxProjectsFolder ;;
