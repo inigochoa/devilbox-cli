@@ -14,6 +14,7 @@ source "$DIR/utils/prompt.sh"
 source "$DIR/commands/docker.sh"
 source "$DIR/commands/folder.sh"
 source "$DIR/commands/help.sh"
+source "$DIR/commands/open.sh"
 
 # Devilbox command.
 devilbox() {
@@ -23,6 +24,7 @@ devilbox() {
         case $1 in
             --folder|-f) __devilboxFolder ;;
             --help|-h)   __devilboxHelp ;;
+            --open|-o)   __devilboxOpen ;;
             --status|-s) __devilboxStatus ;;
             --www|-w)    __devilboxProjectsFolder ;;
             *)
